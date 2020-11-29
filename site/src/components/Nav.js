@@ -1,4 +1,4 @@
-import "./App.css";
+import "../App.css";
 import React from "react";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -9,7 +9,7 @@ import FolderIcon from "@material-ui/icons/Folder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import HomeIcon from "@material-ui/icons/Home";
 
-class App extends React.Component {
+class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,4 +71,4 @@ const styles = {
   selected: {},
 };
 
-export default withStyles(styles)(App);
+export default withStyles(styles)(Nav);
