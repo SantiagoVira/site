@@ -12,7 +12,7 @@ import MePage from "./components/MePage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 ReactDOM.render(
-  <Router basename={process.env.PUBLIC_URL + "/site"}>
+  <Router basename="/site">
     <Switch>
       <Route
         exact

@@ -1,7 +1,6 @@
 import "../App.css";
 import React from "react";
 import Nav from "./Nav";
-import Typography from "@material-ui/core/Typography";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -12,10 +11,9 @@ class HomePage extends React.Component {
     return (
       <div className="cent">
         <Nav value="Home" />
-        <div className="bg"></div>
-        <Typography component="h2" variant="h2">
-          Hello and Welcome!
-        </Typography>
+        <p className="t1">Hello and Welcome to...</p>
+        <p className="t2">My Website!</p>
+        <p className="t3">(It's Pretty Cool)</p>
       </div>
     );
   }

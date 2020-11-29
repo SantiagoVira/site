@@ -8,6 +8,9 @@ class ProjectsDiv extends React.Component {
     this.state = {
       amount: this.props.amount,
     };
+    if (this.props.all === true) {
+      this.setState({ amount: descs.length });
+    }
     this.create = this.create.bind(this);
   }
 

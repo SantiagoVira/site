@@ -4,7 +4,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #d1d1d1;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -54,4 +55,61 @@ body {
 .Projects {
   display: grid;
   grid-template-columns: auto auto;
+}
+.t1,
+.t2,
+.t3 {
+  font-family: "Roboto", sans-serif;
+  margin: 1.5px;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.t1 {
+  font-size: 65px;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+}
+.t2 {
+  font-size: 55px;
+  animation-name: FromRight;
+  animation-duration: 1.5s;
+  position: relative;
+  animation-timing-function: ease-out;
+}
+.t3 {
+  font-size: 20px;
+  margin: 6px;
+  animation-name: Grow;
+  animation-delay: 2s;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+  transform: scale(0);
+  color: #686868;
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes FromRight {
+  0% {
+    left: -70%;
+  }
+  80% {
+    left: 15%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes Grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
