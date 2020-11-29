@@ -15,6 +15,7 @@ class FavoritePage extends React.Component {
         <Nav value="Favorite" /> <p style={{ marginTop: "50px" }}></p>
         <Typography variant="h3">These Are My Favorite Projects.</Typography>
         <Typography variant="h4">Enjoy!</Typography>
+        <p style={{ marginTop: "150px" }}></p>
         <ProjectsDiv amount={4} />
       </div>
     );

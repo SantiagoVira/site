@@ -44,3 +44,10 @@ body {
 .cent {
   text-align: center;
 }
+
+.projlink {
+  text-align: center;
+}
+.projimg {
+  max-width: 30%;
+}

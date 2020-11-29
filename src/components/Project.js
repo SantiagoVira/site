@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
 
 class Project extends React.Component {
   constructor(props) {
@@ -8,16 +9,36 @@ class Project extends React.Component {
     this.state = {};
   }
   render() {
+    const classes = this.props.classes;
     return (
-      <div className="cent" id={this.props.id}>
+      <div className="cent projlink" id={this.props.id}>
         <Typography variant="h2">{this.props.name}</Typography>
         <a href={this.props.file}>
-          <img alt="Icon" src={this.props.img} />
+          <img alt="Icon" src={this.props.img} className="projimg" />
         </a>
-        <Typography variant="h5">{this.props.desc}</Typography>
+        <Typography
+          noWrap={false}
+          align="center"
+          variant="h5"
+          component="h5"
+          className={classes.title}
+        >
+          {this.props.desc}
+        </Typography>
+        <p style={{ marginTop: "150px" }}></p>
       </div>
     );
   }
 }
 
-export default Project;
+const styles = {
+  title: {
+    flexGrow: 1,
+    textAlign: "center",
+    width: "40%",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+};
+
+export default withStyles(styles)(Project);

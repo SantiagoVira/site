@@ -60,8 +60,8 @@ let descs = {
 function auto(name) {
   let id = name.replace(/ /g, "");
   let desc = descs[name];
-  let blank = "../src/pages/";
-  let img = blank + "I/" + id + ".png";
+  let blank = "./pages/";
+  let img = blank + "I/" + name + ".png";
   let file = blank + name + "/index.html";
   return <Project id={id} desc={desc} img={img} file={file} name={name} />;
 }
