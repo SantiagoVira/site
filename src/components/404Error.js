@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import Nav from "./Nav";
+import Typography from "@material-ui/core/Typography";
 
 class Error404 extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class Error404 extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div class="cent">
         <Nav value="404" /> <h1>Thats an oops</h1>
       </div>
     );

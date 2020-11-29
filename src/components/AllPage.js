@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import Nav from "./Nav";
+import Typography from "@material-ui/core/Typography";
 
 class AllPage extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class AllPage extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div class="cent">
         <Nav value="All" /> <h1>Look at all of em</h1>
       </div>
     );

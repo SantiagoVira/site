@@ -64,7 +64,9 @@ class Nav extends React.Component {
 
 const styles = {
   root: {
-    background: "#282c34",
+    background: getComputedStyle(document.body)
+      .getPropertyValue("--bg")
+      .toString(),
     color: "#fff",
     "&$selected": {
       color: "red",

@@ -4,7 +4,13 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #282c34;
+  color: #fff;
+}
+:root {
+  --bg: #303131;
+}
+body {
+  background-color: var(--bg);
 }
 
 .App {
@@ -32,16 +38,6 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cent {
+  text-align: center;
 }

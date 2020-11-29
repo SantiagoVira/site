@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import Nav from "./Nav";
+import Typography from "@material-ui/core/Typography";
 
 class FavoritePage extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class FavoritePage extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div class="cent">
         <Nav value="Favorite" /> <h1>Look At Them Favs</h1>
       </div>
     );
