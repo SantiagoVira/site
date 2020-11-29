@@ -6,6 +6,9 @@ body {
   padding: 0;
   color: #fff;
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
 :root {
   --bg: #303131;
 }

@@ -28,7 +28,6 @@ ReactDOM.render(
       />
       <Route path="/All" component={AllPage} onEnter={() => light("All")} />
       <Route path="/Me" component={MePage} onEnter={() => light("Me")} />
-      <Route component={Error404} />
     </Switch>
   </Router>,
   document.getElementById("root")
@@ -36,6 +35,8 @@ ReactDOM.render(
 function light(val) {
   document.getElementById("NavBar").setState({ value: val });
 }
+//After Router path='Me'
+//<Route component={Error404} />
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

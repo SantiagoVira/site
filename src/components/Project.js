@@ -9,12 +9,12 @@ class Project extends React.Component {
   }
   render() {
     return (
-      <div class="cent">
-        <h1>{this.props.id}</h1>
-        <h1>{this.props.desc}</h1>
-        <h1>{this.props.img}</h1>
-        <h1>{this.props.file}</h1>
-        <h1>{this.props.name}</h1>
+      <div className="cent" id={this.props.id}>
+        <Typography variant="h2">{this.props.name}</Typography>
+        <a href={this.props.file}>
+          <img alt="Icon" src={this.props.img} />
+        </a>
+        <Typography variant="h5">{this.props.desc}</Typography>
       </div>
     );
   }
