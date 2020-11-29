@@ -5,6 +5,7 @@
   "homepage": "/site",
   "dependencies": {
     "@material-ui/core": "^5.0.0-alpha.17",
+    "@material-ui/icons": "^5.0.0-alpha.15",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
