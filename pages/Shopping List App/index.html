@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+
+  <title>Go Shopping</title>
+  <meta charset = "UTF-8" />
+  <link rel="icon" href="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-cartoon-shopping-cart-image_1344332.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <style>
+      .maintext{
+        float:left;
+        text-align: center;
+        width:80%;
+      }
+      .buttons{
+        text-align:left;
+        margin-left: 36.5%;
+        border-radius: 25px;
+        font-size: 20px;
+        background: #E0607E;
+        padding: 15px; 
+        width: 25%;
+        height: 75px; 
+      }
+      .Reset{
+          width:100px;
+        float:left;
+        border: none;
+        border-radius: 25px;
+        background:#cf1a13;
+        margin-left:1.5%;
+        margin-top:1.5%;
+        font-size:17px;
+        padding: 15px 10px;
+      }
+      .Reset:hover {
+        background-color: #cf1913c9;
+    }
+    .Adding{
+        width:40%;
+        height:50px;
+        background:#b0c4de73;
+        border:none;
+        border-radius:20px;
+        font-size:20px;
+    }
+    .AddingBtn{
+        width:25%;
+        height:50px;
+        background:LightGreen;
+        border:none;
+        border-radius: 25px;
+    }
+    .big{
+        width:25%;
+        height:25%;
+    }
+  </style>
+  
+</head>
+
+
+<body onload="AddAll()">
+    <script src='shop.js'></script>
+
+    <button type='button' class='Reset' onclick='reset();'>Clear List</button> 
+
+    <div class='maintext'>
+
+    <h1>Shopping List!</h1>
+    <br>
+    <br>
+    <h3>Item:</h3>
+    <input id='item' class='Adding' onkeyup="empty()">
+    <br>
+    <br>
+    <button type="button" onclick="Add();" class='AddingBtn' id='addbutton' disabled>Add Item to list</button>
+
+    <br><br><br><br>
+    
+    
+    <div id='buttons'></div>    
+
+    </div>
+  
+</body>
+</html>

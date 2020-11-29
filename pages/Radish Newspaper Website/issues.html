@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Radish</title>
+
+    <style>
+        body {
+        background: linear-gradient(to left top , rgba(255, 0, 0, 0.253), rgba(255,0,0,1)) fixed;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: linear-gradient(to right,rgba(143,25,48),rgba(143, 25, 49, 0));
+            opacity:0.8;
+            }
+
+        li {
+            float: left;
+            }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 14px;
+            text-decoration: none;
+            }
+
+        li a:hover {
+            background-color: rgba(134, 131, 131, 0.5);
+            }
+        
+        .active:after {
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            margin: 0 auto; /* This will center the border. */
+            width: 100%; /* Change this to whatever width you want. */
+            padding-top: 5px; /* This creates some space between the element and the border. */
+            border-bottom: 2px solid white; /* This creates the border. Replace black with whatever color you want. */
+        }
+
+        .column {
+  float: left;
+  max-height: 630px;
+  padding: 10px;
+  flex:33%;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+
+    </style>
+</head>
+<body onload='loadup()'>
+    <script src="home.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <ul style="padding-left: 2px;">
+        <li><a href=home.html>Home</a></li>
+        <li><a class="active" href=issues.html>All Articles</a></li>
+        <!--<li><a href=schedule.html>SCHEDULE</a></li>
+        <li><a href=about.html>ABOUT</a></li>
+        <li><a href=contact.html>CONTACTS</a></li>-->
+      </ul>
+
+
+
+      <div id='welcome'></div>
+      <div id=frame></div>
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  :root {
+    --linkW:70%;
+    --margin:100% - var(--linkW);
+    --linkpad:-20%;
+}
+body{
+    margin:0;
+    
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/184/640/original/triangle-abstract-black-background-vector.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+.link{
+    height:50%;
+    text-decoration:none;
+}
+a:link {text-decoration:none;color:aliceblue;}
+a:visited {text-decoration:none;color:aliceblue;}
+a:hover {text-decoration:none;color:aliceblue;}
+a:active {text-decoration:none;color:aliceblue;}
+
+.avatar{
+    float:right;
+    max-width:35%;
+    margin-right:3%;
+}
+
+.selfdesc{
+    text-align:left;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+    display:block;
+    width:90%;
+    font-size:30px;
+    margin-left: 5%;
+    color:white;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.pTitle{
+    font-size:40;
+    text-align: center;
+    display: block;
+margin-left: auto;
+margin-right: auto;
+max-width: var(--linkW);
+}
+
+.r{margin-right: var(--margin); padding-right: var(--linkpad);}
+.l{margin-left: var(--margin); padding-left: var(--linkpad);}
+
+.desc{
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+    display:block;
+    width:80%;
+    font-size:25px;
+    margin-left: 5%;
+
+    padding-left:5%;
+    padding-right:5%;
+}
+.spacer{
+    padding-bottom:10%;
+}
