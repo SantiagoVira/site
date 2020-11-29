@@ -20,7 +20,7 @@ class Nav extends React.Component {
 
   handleChange(event, newValue) {
     this.setState({ value: newValue });
-    document.location.href = "/site/" + newValue;
+    document.location.href = "/" + newValue;
   }
 
   render() {
