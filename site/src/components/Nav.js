@@ -13,13 +13,14 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "home",
+      value: this.props.value.toString(),
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event, newValue) {
     this.setState({ value: newValue });
+    document.location.href = "/" + newValue;
   }
 
   render() {
@@ -30,28 +31,29 @@ class Nav extends React.Component {
         value={this.state.value}
         onChange={this.handleChange}
         classes={actionClasses}
+        id="NavBar"
       >
         <BottomNavigationAction
           label="Home"
-          value="home"
+          value="Home"
           icon={<HomeIcon />}
           classes={actionClasses}
         />
         <BottomNavigationAction
           label="Favorites"
-          value="favorites"
+          value="Favorite"
           icon={<FavoriteIcon />}
           classes={actionClasses}
         />
         <BottomNavigationAction
           label="All Projects"
-          value="all"
+          value="All"
           icon={<FolderIcon />}
           classes={actionClasses}
         />
         <BottomNavigationAction
           label="Me"
-          value="me"
+          value="Me"
           icon={<PersonIcon />}
           classes={actionClasses}
         />
@@ -68,7 +70,7 @@ const styles = {
       color: "red",
     },
   },
-  selected: {},
+  selected: { color: "red" },
 };
 
 export default withStyles(styles)(Nav);
