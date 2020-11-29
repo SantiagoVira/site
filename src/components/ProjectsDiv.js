@@ -26,7 +26,7 @@ class ProjectsDiv extends React.Component {
   }
 
   render() {
-    return <div name="Projects">{this.create()}</div>;
+    return <div className="Projects">{this.create()}</div>;
   }
 }
 

@@ -51,3 +51,7 @@ body {
 .projimg {
   max-width: 30%;
 }
+.Projects {
+  display: grid;
+  grid-template-columns: auto auto;
+}

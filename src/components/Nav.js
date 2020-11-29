@@ -40,7 +40,7 @@ class Nav extends React.Component {
           classes={actionClasses}
         />
         <BottomNavigationAction
-          label="Favorites"
+          label="My Favorites"
           value="Favorite"
           icon={<FavoriteIcon />}
           classes={actionClasses}

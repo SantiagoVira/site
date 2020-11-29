@@ -35,7 +35,7 @@ const styles = {
   title: {
     flexGrow: 1,
     textAlign: "center",
-    width: "40%",
+    width: "85%",
     marginLeft: "auto",
     marginRight: "auto",
   },
