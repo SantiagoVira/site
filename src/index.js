@@ -12,30 +12,22 @@ import MePage from "./components/MePage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 ReactDOM.render(
-  <Router basename={process.env.PUBLIC_URL}>
+  <Router basename="/site">
     <Switch>
       <Route
         exact
-        path="/site/"
+        path="/"
         component={HomePage}
         onEnter={() => light("Home")}
       />
+      <Route path="/home" component={HomePage} onEnter={() => light("Home")} />
       <Route
-        path="/site/home"
-        component={HomePage}
-        onEnter={() => light("Home")}
-      />
-      <Route
-        path="/site/favorite"
+        path="/favorite"
         component={FavoritePage}
         onEnter={() => light("Favorite")}
       />
-      <Route
-        path="/site/All"
-        component={AllPage}
-        onEnter={() => light("All")}
-      />
-      <Route path="/site/Me" component={MePage} onEnter={() => light("Me")} />
+      <Route path="/All" component={AllPage} onEnter={() => light("All")} />
+      <Route path="/Me" component={MePage} onEnter={() => light("Me")} />
       <Route component={Error404} />
     </Switch>
   </Router>,
