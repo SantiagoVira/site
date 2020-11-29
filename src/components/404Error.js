@@ -11,7 +11,9 @@ class Error404 extends React.Component {
   render() {
     return (
       <div class="cent">
-        <Nav value="404" /> <h1>Thats an oops</h1>
+        <Nav value="404" />
+        <Typography variant="h2">Thats an oops,</Typography>
+        <Typography variant="h3">No page here</Typography>
       </div>
     );
   }

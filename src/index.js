@@ -16,18 +16,27 @@ ReactDOM.render(
     <Switch>
       <Route
         exact
-        path="/"
+        path="/site/"
         component={HomePage}
         onEnter={() => light("Home")}
       />
-      <Route path="/home" component={HomePage} onEnter={() => light("Home")} />
       <Route
-        path="/favorite"
+        path="/site/home"
+        component={HomePage}
+        onEnter={() => light("Home")}
+      />
+      <Route
+        path="/site/favorite"
         component={FavoritePage}
         onEnter={() => light("Favorite")}
       />
-      <Route path="/All" component={AllPage} onEnter={() => light("All")} />
-      <Route path="/Me" component={MePage} onEnter={() => light("Me")} />
+      <Route
+        path="/site/All"
+        component={AllPage}
+        onEnter={() => light("All")}
+      />
+      <Route path="/site/Me" component={MePage} onEnter={() => light("Me")} />
+      <Route component={Error404} />
     </Switch>
   </Router>,
   document.getElementById("root")
