@@ -1,0 +1,127 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Cobra Kai</title>
+
+    <style>
+      body {
+        background-color: black;
+      }
+      .SignIn {
+        color: aliceblue;
+        scroll-behavior: smooth;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #111;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: rgb(212, 14, 14);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #333;
+      }
+
+      .active:after {
+        content: ""; /* This is necessary for the pseudo element to work. */
+        display: block; /* This will put the pseudo element on its own line. */
+        margin: 0 auto; /* This will center the border. */
+        width: 100%; /* Change this to whatever width you want. */
+        padding-top: 5px; /* This creates some space between the element and the border. */
+        border-bottom: 2px solid red; /* This creates the border. Replace black with whatever color you want. */
+      }
+      .cobra {
+        margin-bottom: 90%;
+      }
+      .SignIn {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 200%;
+        margin-top: 10%;
+        height: 60%;
+        width: 45%;
+        background-color: rgb(218, 56, 56);
+
+        text-align: center;
+      }
+      .SI1 {
+        font-size: 250%;
+        font-family: "Roboto";
+        margin-bottom: -5%;
+      }
+      .ST2 {
+        margin-top: 10%;
+        font-size: 125%;
+        font-family: "Roboto";
+      }
+      .ST3 {
+        margin-bottom: -25%;
+        text-align: left;
+        font-size: 125%;
+        font-family: "Roboto";
+      }
+    </style>
+  </head>
+  <body>
+    <script src="home.js"></script>
+    <audio id="audio" src="SnakeHiss.mp3"></audio>
+
+    <ul style="border-bottom: 4px solid red; padding-left: 2px">
+      <li><a class="active" href="index.html">HOME</a></li>
+      <li><a href="programs.html">PROGRAMS</a></li>
+      <li><a href="schedule.html">SCHEDULE</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACTS</a></li>
+    </ul>
+
+    <img
+      src="Main picture off.jpg"
+      alt="Cobra Kai"
+      width="100%"
+      height="100%"
+      id="Main Picture"
+      class="cobra"
+      onclick="changeImage()"
+    />
+
+    <br id="SignInTop" />
+
+    <div class="SignIn" id="SignIn">
+      <p class="SI1">Sign in</p>
+      <p class="ST2">Username</p>
+      <input type="text" id="username" name="username" class="ST3" />
+      <p class="ST2">Password</p>
+      <input
+        type="text"
+        id="password"
+        name="password"
+        class="ST3"
+      /><br /><br /><br /><br />
+      <button id="Log In" name="Log In" class="ST3">Sign in</button>
+      <br /><br /><br /><br />
+      <a style="color: white; text-align: center" href="forgot.html"
+        >Forgot Password?</a
+      ><br /><br /><br /><br /><br /><br /><br /><br />
+      <button id="Sign Up" name="Sign Up" class="ST3">Create Account</button>
+    </div>
+  </body>
+</html>

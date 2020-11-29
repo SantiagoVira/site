@@ -1,0 +1,109 @@
+:root{
+    --btnSpace: 2%;
+}
+
+.title{
+    font-size:100px;
+    text-align:center;
+    margin:0;
+}
+.link{
+    font-size:20px;
+    text-align:center;
+    margin:0;
+}
+.signup{
+    margin:auto;
+}
+
+.btn{
+    outline:none;
+    border:none;
+    border-bottom: 4px solid;
+    border-color: rgba(255, 0, 0, 0.5);
+    color:black;
+    background-color: white;
+
+    font-size:40px;
+    margin-right: var(--btnSpace);
+    margin-left:var(--btnSpace);
+
+}
+.activated{
+    border-color: rgba(255, 0, 0);
+}
+
+.navbar{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.signup{
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 10%;
+}
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.tag{
+    font-size:30px;
+    font-weight: bold;
+}
+
+input{
+    outline:none;
+    border:none;
+    border-radius: 25px;
+    width:40%;
+    height:8%;
+    background-color: #f0efef;
+
+    font-size:40px;
+    padding-left: 1%;
+    
+}
+.eye{
+    position: absolute;
+    right:20%;
+    height: 6%;
+    
+}
+
+.verify{
+    background-color: rgb(23, 173, 23);
+    font-size:20px;
+    text-align: center;
+    width:15%;
+    height:10%;
+
+    border:none;
+    outline:none;
+    border-radius: 25px;
+    margin-top: 3%;
+
+}
+
+.error{
+    border: 2px solid;
+    border-color: red;
+}
+
+.errortxt{
+    color:red;
+    font-size:14px;
+    font-family: 'Arial';
+}
+
+.errorcont{
+    margin:auto;
+    width:40%;
+    text-align:left;
+    padding-left:2%
+    
+}
