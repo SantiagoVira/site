@@ -53,9 +53,6 @@ let descs = {
     They showed very little of the website for not a lot of time, but I think I did a pretty good job at recreating it. 
     Sidenote: watch Cobra Kai, it's good.`,
 
-  "Stop Watch App": `This is another beginner app I made to learn JavaScript and advance my coding skills. Its just the basic online
-    stopwatch format that almost everyone knows. There is noting super special about this, but I just thought I would put it here.`,
-
   "Covid-19 Quiz": `This was my teams entry to my first ever hackathon. It is a website that quizes you on your knowledge of Covid-19
     and hopefully helps you learn a little bit.`,
 };
