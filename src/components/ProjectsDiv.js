@@ -17,7 +17,8 @@ class ProjectsDiv extends React.Component {
   create() {
     let projs = [];
     let counter = 0;
-    for (var i in descs) {
+    for (var j in ranks) {
+      let i = ranks[j];
       if (counter === this.state.amount) {
         break;
       }
@@ -34,6 +35,14 @@ class ProjectsDiv extends React.Component {
 }
 
 export default ProjectsDiv;
+
+let ranks = [
+  "Covid-19 Quiz",
+  "Radish Newspaper Website",
+  "Murder Mystery Role Picker",
+  "Shopping List App",
+  "Cobra Kai Clone",
+];
 
 let descs = {
   "Radish Newspaper Website": `In my freshman year at highschool, I joined a satirical school newspaper called The Radish. I thought it might be cool
