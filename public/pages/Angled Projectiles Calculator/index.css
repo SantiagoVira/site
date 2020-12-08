@@ -26,11 +26,16 @@ body {
 .sTitle {
     text-align: center;
     font-size: 20px;
+    margin-bottom: -50px;
 }
-.Answer {
+.Answer,
+.Process {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 .modes {
     text-align: center;
+}
+.s {
+    font-size: 25px;
 }
