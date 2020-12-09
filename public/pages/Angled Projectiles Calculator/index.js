@@ -6,6 +6,10 @@ function handle() {
         maxheight();
     } else if (mode == "time") {
         timeify();
+    } else if (mode == "viy") {
+        viyify();
+    } else if (mode == "vix") {
+        vixify();
     }
 }
 let Vi = "V<sub class='s'>i</sub>";
@@ -27,6 +31,36 @@ range: Vi * t + 1/2at^2
 -original Vix
 a=0
 */
+function vixify() {
+    let vel = document.getElementById("vel").value;
+    let ang = document.getElementById("ang").value;
+    let result = +(vel * Math.cos(r(ang))).toFixed(2);
+    document.getElementById("Answer").innerHTML =
+        result.toString() + " meters/second";
+
+    document.getElementById(
+        "Process"
+    ).innerHTML = `V<sub class="s">ix</sub> = ${Vi} x cos(angle) =<br>
+    V<sub class="s">ix</sub> = ${vel} x cos(${ang}) =<br>
+    V<sub class="s">ix</sub> = ${vel} x ${Math.cos(r(ang))} =<br>
+    ${result}
+    `;
+}
+function viyify() {
+    let vel = document.getElementById("vel").value;
+    let ang = document.getElementById("ang").value;
+    let result = +(vel * Math.sin(r(ang))).toFixed(2);
+    document.getElementById("Answer").innerHTML =
+        result.toString() + " meters/second";
+
+    document.getElementById(
+        "Process"
+    ).innerHTML = `V<sub class="s">iy</sub> = ${Vi} x sin(angle) =<br>
+    V<sub class="s">ix</sub> = ${vel} x sin(${ang}) =<br>
+    V<sub class="s">ix</sub> = ${vel} x ${Math.sin(r(ang))} =<br>
+    ${result}
+    `;
+}
 
 function minput(id) {
     let inp = document.getElementById(id);
