@@ -10,6 +10,8 @@ function handle() {
         viyify();
     } else if (mode == "vix") {
         vixify();
+    } else if (mode == "all") {
+        allify();
     }
 }
 let Vi = "V<sub class='s'>i</sub>";
@@ -31,6 +33,24 @@ range: Vi * t + 1/2at^2
 -original Vix
 a=0
 */
+function allify() {
+    let vel = document.getElementById("vel").value;
+    let ang = document.getElementById("ang").value;
+    let vix = +(vel * Math.cos(r(ang))).toFixed(2);
+    let viy = +(vel * Math.sin(r(ang))).toFixed(2);
+    let range = +findrange().toFixed(2);
+    let maxheight = +findmaxheight().toFixed(2);
+    let time = +findtime().toFixed(2);
+
+    document.getElementById("Answer").innerHTML = `
+    V<sub class="s">ix</sub> = ${vix} m/s<br>
+    V<sub class="s">iy</sub> = ${viy} m/s<br>
+    Range = ${range} m<br>
+    Max Height = ${maxheight} m<br>
+    Total Time = ${time} s
+    `;
+}
+
 function vixify() {
     let vel = document.getElementById("vel").value;
     let ang = document.getElementById("ang").value;
