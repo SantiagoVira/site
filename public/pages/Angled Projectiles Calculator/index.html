@@ -21,13 +21,19 @@
                 type="number"
                 id="vel"
                 placeholder="Initial Velocity (m/s)"
-                onchange="store()"
+                onchange="minput('vel')"
             />
             <input
                 type="number"
                 id="ang"
                 placeholder="Theta / Angle (°)"
                 onchange="store()"
+            />
+            <input
+                type="number"
+                id="hi"
+                placeholder="Initial Height (m)"
+                onchange="minput('hi')"
             />
             <button onclick="handle()">Calculate</button>
         </div>

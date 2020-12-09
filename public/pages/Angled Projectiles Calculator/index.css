@@ -33,9 +33,16 @@ body {
     text-align: center;
     font-size: 40px;
 }
+.Process {
+    margin-bottom: -50px;
+}
 .modes {
     text-align: center;
 }
 .s {
     font-size: 25px;
+}
+option {
+    border-radius: 25px;
+    box-shadow: -10px -10px #000;
 }
