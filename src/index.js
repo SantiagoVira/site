@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage";
 import FavoritePage from "./components/FavoritePage";
 import AllPage from "./components/AllPage";
 import MePage from "./components/MePage";
+import GamesPage from "./components/GamesPage";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -18,6 +19,7 @@ ReactDOM.render(
             <Route path="/home" component={HomePage} />
             <Route path="/favorite" component={FavoritePage} />
             <Route path="/All" component={AllPage} />
+            <Route path="/Games" component={GamesPage} />
             <Route path="/Me" component={MePage} />
             <Route component={Error404} />
         </Switch>

@@ -8,6 +8,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import FolderIcon from "@material-ui/icons/Folder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import HomeIcon from "@material-ui/icons/Home";
+import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 
 class Nav extends React.Component {
     constructor(props) {
@@ -49,6 +50,12 @@ class Nav extends React.Component {
                     label="All Projects"
                     value="All"
                     icon={<FolderIcon />}
+                    classes={actionClasses}
+                />
+                <BottomNavigationAction
+                    label="Games"
+                    value="Games"
+                    icon={<SportsEsportsIcon />}
                     classes={actionClasses}
                 />
                 <BottomNavigationAction
