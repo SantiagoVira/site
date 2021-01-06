@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+:root {
+    --color: #d3d3d3;
+    --border: black;
+}
+
+/* This is just to center the heading, y’all. */
+h1 {
+    margin: 2em auto auto;
+    padding: 0 1em;
+    text-align: center;
+    width: 80%;
+}
+#Start {
+    --color: #60a5fa;
+}
+#Tutorial {
+    --color: #747474;
+}
+#Home {
+    --color: #2fc443;
+}
+/* PIXEL BORDER */
+.pxl-border {
+    background: var(--color);
+    box-shadow:
+/* color Background Color -- Same as color */ 0 -6px 0 -2px
+            var(--color),
+        0 6px 0 -2px var(--color), 0 -12px 0 -4px var(--color),
+        0 12px 0 -4px var(--color), 0 -18px 0 -8px var(--color),
+        0 18px 0 -8px var(--color), 0 -24px 0 -12px var(--color),
+        0 24px 0 -12px var(--color), /* color Border */ -2px 0 0 0 var(--border),
+        2px 0 0 0 var(--border), 0 -4px 0 0 var(--border),
+        0 4px 0 0 var(--border), 0 -10px 0 -2px var(--border),
+        0 10px 0 -2px var(--border), 0 -14px 0 -4px var(--border),
+        0 14px 0 -4px var(--border), 0 -20px 0 -8px var(--border),
+        0 20px 0 -8px var(--border), 0 -26px 0 -12px var(--border),
+        0 26px 0 -12px var(--border),
+        /* Middle Border -- color */ -4px 0 0 0 var(--color),
+        4px 0 0 0 var(--color), 0 -2px 0 2px var(--color),
+        0 2px 0 2px var(--color), 0 -8px 0 0px var(--color),
+        0 8px 0 0px var(--color), 0 -12px 0 -2px var(--color),
+        0 12px 0 -2px var(--color), 0 -16px 0 -4px var(--color),
+        0 16px 0 -4px var(--color), 0 -22px 0 -8px var(--color),
+        0 22px 0 -8px var(--color), 0 -28px 0 -12px var(--color),
+        0 28px 0 -12px var(--color), /* Outer Border */ -6px 0 0 0 var(--border),
+        6px 0 0 0 var(--border), 0 0 0 4px var(--border),
+        0 -6px 0 2px var(--border), 0 6px 0 2px var(--border),
+        0 -10px 0 0 var(--border), 0 10px 0 0 var(--border),
+        0 -14px 0 -2px var(--border), 0 14px 0 -2px var(--border),
+        0 -18px 0 -4px var(--border), 0 18px 0 -4px var(--border),
+        0 -24px 0 -8px var(--border), 0 24px 0 -8px var(--border),
+        0 -30px 0 -12px var(--border), 0 30px 0 -12px var(--border);
+}

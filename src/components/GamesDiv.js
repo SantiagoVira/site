@@ -36,9 +36,10 @@ class ProjectsDiv extends React.Component {
 
 export default ProjectsDiv;
 
-let ranks = ["Space Blast"];
+let ranks = ["Clash", "Space Blast"];
 
 let descs = {
+    Clash: `This is a game I made called Clash, no tutorial or anything just me. I did the pixel art and all that stuff by myself, and I like the way it turned out`,
     "Space Blast": `This is my first ever game in JavaScript. I was following a turtorial when making it, but it helped me learn a lot about creating games.
     After that, I was excited to keep making more of them`,
 };
