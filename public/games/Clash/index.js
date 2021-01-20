@@ -35,6 +35,12 @@ const c = canvas.getContext("2d");
 canvas.width = innerWidth * 0.85;
 canvas.height = innerHeight * 0.85;
 
+//Making the sounds
+function sound(src) {
+    const audio = new Audio("./Sounds/" + src);
+    audio.play();
+}
+
 //Drawing white background and outline
 function basic() {
     c.fillStyle = "#fff";
@@ -102,11 +108,13 @@ const speed = 13.5;
 
 //Making the PLayer Class
 class Player {
-    constructor(x, y, src, vel, ri, hx, hy, up, left, right, shoot) {
+    constructor(x, y, src, vel, ri, hx, up, left, right, shoot) {
         this.x = x;
         this.y = y;
         this.img = new Image();
         this.img.src = src;
+        this.glow = new Image();
+        this.glow.src = "./glow.png";
         this.w = 30;
         this.h = 50;
         this.vel = vel;
@@ -115,7 +123,7 @@ class Player {
         this.hp = 100;
         this.power = 1;
         this.hx = hx;
-        this.hy = hy;
+        this.hy = innerHeight * 0.94;
         this.up = up;
         this.left = left;
         this.rightkey = right;
@@ -183,6 +191,13 @@ class Player {
         //Power up
         if (this.power >= 100) {
             this.power = 100;
+            c.drawImage(
+                this.glow,
+                this.x - 5,
+                this.y - 5,
+                this.w + 10,
+                this.h + 10
+            );
         }
     }
     collide(obs) {
@@ -206,6 +221,7 @@ class Player {
         ) {
             this.power += 33;
             star.alive = false;
+            sound("Star.wav");
         }
         if (
             obs.size == 55 &&
@@ -226,39 +242,39 @@ class Player {
     }
     health() {
         ctx.fillStyle = "#fff";
-        ctx.fillRect(this.hx - 60, this.hy, 75, 30);
+        ctx.fillRect(this.hx() - 60, this.hy, 75, 30);
         ctx.fillStyle = "black";
         ctx.font = "25px FR73 Pixel";
         ctx.fillText(
             `p${players.indexOf(this) + 1}`,
-            this.hx - 30,
+            this.hx() - 30,
             this.hy + 20
         );
 
         //Draw an outline rect
         ctx.lineWidth = 2;
         ctx.fillStyle = "#f73b3b";
-        ctx.fillRect(this.hx, this.hy, 300, 15);
+        ctx.fillRect(this.hx(), this.hy, 300, 15);
         ctx.fillStyle = "#5ce327";
-        ctx.fillRect(this.hx, this.hy, this.hp * 3, 15);
+        ctx.fillRect(this.hx(), this.hy, this.hp * 3, 15);
         ctx.beginPath();
-        ctx.rect(this.hx, this.hy, 300, 15);
+        ctx.rect(this.hx(), this.hy, 300, 15);
         ctx.closePath();
         ctx.stroke();
         //Power Up Bar
         ctx.fillStyle = "#094ed9";
-        ctx.fillRect(this.hx, this.hy + 15, 300, 15);
+        ctx.fillRect(this.hx(), this.hy + 15, 300, 15);
         ctx.fillStyle = "#e6d137";
-        ctx.fillRect(this.hx, this.hy + 15, this.power * 3, 15);
+        ctx.fillRect(this.hx(), this.hy + 15, this.power * 3, 15);
         ctx.beginPath();
-        ctx.rect(this.hx, this.hy + 15, 300, 15);
+        ctx.rect(this.hx(), this.hy + 15, 300, 15);
         ctx.closePath();
         ctx.stroke();
 
         if (this.right == true) {
-            drawImage(this, 0, false, this.hx - 65, this.hy - 10, 0.5, ctx);
+            drawImage(this, 0, false, this.hx() - 65, this.hy - 10, 0.5, ctx);
         } else {
-            drawImage(this, 180, true, this.hx - 65, this.hy - 10, 0.5, ctx);
+            drawImage(this, 180, true, this.hx() - 65, this.hy - 10, 0.5, ctx);
         }
     }
 }
@@ -274,6 +290,7 @@ class Bullet {
         this.vel = vel;
         this.right = ri;
         this.p = p;
+        sound("Shoot.mp3");
     }
 
     draw() {
@@ -295,23 +312,27 @@ class Bullet {
             setTimeout(() => {
                 bullets.splice(bullets.indexOf(this), 1);
             }, 0);
+            sound("Wall.wav");
         }
     }
 
-    collide(obs, col, hit) {
+    collide(obs, col, hit, noise) {
         hit += this.p.power / 1000;
         hit += this.p.hp / 1000;
         hit > 1.6 ? (hit = 1.6) : null;
         const go = () => {
-            this.p.power += 2;
+            if (obs.power) {
+                this.p.power += 2;
+            }
             explosion(this.x + this.w, this.y + this.h / 2, col);
             setTimeout(() => {
                 bullets.splice(bullets.indexOf(this), 1);
                 obs.hp -= hit + this.p.power / 100;
             }, 0);
+            sound(noise);
         };
         if (
-            this.x + this.w / 4 >= obs.x &&
+            this.x + 3 * (this.w / 4) >= obs.x &&
             this.x + this.w < obs.x &&
             this.y + this.h > obs.y &&
             this.y < obs.y + obs.h &&
@@ -321,7 +342,7 @@ class Bullet {
         }
         if (
             this.x + this.w / 4 <= obs.x + obs.w &&
-            this.x > obs.x &&
+            this.x + this.w > obs.x &&
             this.y + this.h > obs.y &&
             this.y < obs.y + obs.h &&
             obs != this.p
@@ -359,28 +380,30 @@ function init() {
     p1 = new Player(
         80,
         50,
-        "./p1.png",
+        PlayerOneFinalChoice,
         { x: 0, y: 0 },
         true,
-        innerWidth * 0.125,
-        innerHeight * 0.94,
+        () => {
+            return innerWidth * 0.125;
+        },
         "w",
         "a",
         "d",
-        "f"
+        "s"
     );
     p2 = new Player(
         canvas.width - 80 - 30,
         50,
-        "./p2.png",
+        PlayerTwoFinalChoice,
         { x: 0, y: 0 },
         false,
-        innerWidth * 0.875 - 300,
-        innerHeight * 0.94,
+        () => {
+            return innerWidth * 0.875 - 300;
+        },
         "arrowup",
         "arrowleft",
         "arrowright",
-        "l"
+        "arrowdown"
     );
     players.forEach((p) => {
         for (var i = 0; i < 6; i++) {
@@ -508,9 +531,6 @@ function CreatePlatforms() {
     }
     star = new Star(highest.obj.x + 55, highest.obj.y - 45);
 }
-
-//Creating the players
-
 //Make an animation loop
 let animationID;
 function animate() {
@@ -548,8 +568,8 @@ function animate() {
     });
     bullets.forEach((bullet) => {
         bullet.update();
-        boxes.forEach((box) => bullet.collide(box, "green", 1));
-        players.forEach((p) => bullet.collide(p, "red", 1));
+        boxes.forEach((box) => bullet.collide(box, "green", 1, "Box.mp3"));
+        players.forEach((p) => bullet.collide(p, "red", 1, "Hit.wav"));
     });
     particles.forEach((particle, index) => {
         if (particle.alpha <= 0) {
@@ -573,6 +593,7 @@ window.addEventListener("keydown", (e) => {
         if (key == p.up && p.vel.y == 0) {
             p.vel.y -= 15;
             p.slow = false;
+            sound("Jump.wav");
         }
         if (key == p.left) {
             p.vel.x = -speed;
