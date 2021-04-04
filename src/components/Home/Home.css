@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
 .homepagemain {
     text-align: center;
+}
+.homeMyName {
+    font-size: 10vw;
+    font-family: "Abril Fatface", cursive;
+    margin: 0;
+    user-select: none;
+}
+.homeMyDescription {
+    font-size: 2vw;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    max-width: 75vw;
 }

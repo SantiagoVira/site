@@ -1,0 +1,68 @@
+.ProjectsPageSubtitle {
+    border-bottom: 2px solid var(--text);
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    margin-bottom: 5vh;
+}
+.ProjectBreakdownWrapper {
+    justify-content: space-evenly;
+    width: 400px;
+    height: 400px;
+    border: 2px solid var(--text);
+    margin: 15px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.ProjectBreakdownImage {
+    width: 200px;
+    transition-delay: 40ms;
+    transition-duration: 100ms;
+}
+.ProjectBreakdownImage:hover,
+.ProjectBlogPageImage:hover {
+    transform: scale(1.03, 1.03);
+    -webkit-filter: drop-shadow(2px 2px 2px rgb(29, 29, 29));
+    filter: drop-shadow(2px 2px 2px rgb(29, 29, 29));
+}
+
+.ProjectBreakdownTitle {
+    font-size: 8vh;
+    margin: 10px;
+}
+
+.ProjectsPageMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ProjectBlogPageTitle {
+    font-size: 5rem;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 0.2rem solid var(--text);
+}
+
+.ProjectBlogPageImage {
+    width: 20vw;
+    transition-delay: 40ms;
+    transition-duration: 100ms;
+}
+
+.ProjectBlogPageDesc {
+    font-size: 2rem;
+    text-align: center;
+    width: 90%;
+}
+
+.ProjectBlogPageButton {
+    color: var(--bg) !important;
+    background-color: var(--text) !important;
+}
+/*
+transition-delay: 100ms;
+    transition-duration: 200ms;
+*/

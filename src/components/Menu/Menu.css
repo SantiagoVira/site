@@ -1,0 +1,17 @@
+.menuMain {
+    background-color: var(--bg) !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menuMain > button {
+    color: var(--text);
+}
+.MuiBottomNavigationAction-root.Mui-selected {
+    color: var(--blue1) !important;
+}
+.MenuHighlight {
+    box-shadow: 0px 1px 4px var(--text);
+}

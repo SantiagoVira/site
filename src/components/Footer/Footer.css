@@ -1,0 +1,21 @@
+.SocialsIcon {
+    font-size: 2.5rem !important;
+    color: var(--text);
+}
+.FooterMain {
+    align-items: flex-end !important;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+}
+.FooterMyLogoPath {
+    fill: var(--text);
+}
+.ChangeLightModeIcon {
+    color: var(--text);
+    font-size: 1.75rem !important;
+}
+.footerRight {
+    margin-left: auto;
+    margin-right: 4vw;
+}

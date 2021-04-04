@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Sqrrlz",
+        "external": true,
+        "link": "https://sqrrlz.herokuapp.com/",
+        "linkName": "sqrrlz",
+        "description": "this is a description",
+        "src": "sqrrlz.png"
+    },
+    {
+        "title": "A.D.D.",
+        "external": true,
+        "link": "https://alldaydonkey.com/",
+        "linkName": "alldaydonkey",
+        "description": "",
+        "src": "alldaydonkey.png"
+    },
+    {
+        "title": "Murder Mystery",
+        "external": false,
+        "link": "/projects/MurderMystery/index.html",
+        "linkName": "MurderMystery",
+        "description": "I like to play Murder Mystery when I visit one of my friends' house. However, we didn't have a good system for choosing roles. I made this website to fix that problem. The website allows you to customize the amount of murderers, sheriffs, and innocents and it will randomly assign each player a role once you start the game.",
+        "src": "murder.png"
+    },
+    {
+        "title": "Covid Quiz",
+        "external": false,
+        "link": "/projects/CovidQuiz/index.html",
+        "linkName": "CovidQuiz",
+        "description": "",
+        "src": "covid.png"
+    }
+]
